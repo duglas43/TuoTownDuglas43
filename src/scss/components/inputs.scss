@@ -1,0 +1,18 @@
+.input-group-btn{
+  display: inline-block;
+  position: relative;
+  button{
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%);
+  }
+}
+.input{
+  background-color: $lightgrey;
+  border: none;
+  border-radius: 5px;
+  color:$greytext;
+  padding: 1.5em;
+  font-size: 16px;
+}

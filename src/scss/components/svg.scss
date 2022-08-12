@@ -1,0 +1,14 @@
+.svg{
+  &--transparent{
+    fill: transparent;
+  }
+  &--white{
+    fill: #fff;
+  }
+  &--disabled{
+    fill:#878787;
+  }
+  &--active{
+    fill: rgba(255, 0, 0, 1);
+  }
+}

@@ -1,0 +1,21 @@
+.flex4{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  & .product{
+    align-self: center;
+  }
+}
+@media screen and(max-width:768px){
+  .flex4 > *{
+    width: 50%;
+  }
+}
+@media screen and (max-width:425px) {
+  .flex4 > *{
+    width: 100%;
+  }
+}
