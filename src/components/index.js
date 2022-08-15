@@ -4,3 +4,6 @@ export {default as Header} from './Header';
 export {default as Slider} from './Slider';
 export {default as SvgSprite} from './SvgSprite';
 export {default as ProductBlock} from './ProductBlock';
+export {default as CatalogAccordion} from './CatalogAccordion';
+export {default as CartProduct} from './CartProduct';
+export {default as HeaderCategorie} from './HeaderCategorie';

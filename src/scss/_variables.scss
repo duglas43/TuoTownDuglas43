@@ -1,6 +1,11 @@
 $grey:#878787;
+$grey-back:#353535;
 $lightgrey:#F6F6F6;
 $greytext:#ADACAC;
+$grey-block: #303030;
+.greytext{
+  color: $greytext;
+}
 $dark:rgba(39, 39, 39, 1);
 .hide{
   display: none;

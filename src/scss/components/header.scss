@@ -110,7 +110,7 @@
     min-width: 500px;
     height: 100vh;
     z-index: 10000;
-    backdrop-filter: blur(25px);
+    background-color: $dark;
     overflow-y: auto;
     transition: all .3s linear;
     &.active{

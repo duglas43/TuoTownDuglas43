@@ -1,0 +1,40 @@
+.catalog__caption{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.catalog{
+  .container{  
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.accordion div, .accordion button , .accordion h2, .accordion{
+  font-size: 16px;
+  transition: all 0.2s linear !important;
+  background-color: $grey-back !important;
+  color: $greytext !important;
+  border: none !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  box-shadow: 0 0 0 0 !important;
+  fill:white !important;
+  text-align: left !important;
+}
+.accordion-button:after{
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+.accordion-button[aria-expanded=true]{
+  color: white !important;
+}
+.accordion {
+  button.accordion-active{
+    color: white !important;
+  }
+  button:hover{
+    color: white !important;
+  }
+}

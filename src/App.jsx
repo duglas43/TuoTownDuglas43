@@ -1,7 +1,9 @@
+import React from "react";
 import {SvgSprite,Header} from "./components";
-import {Home, Catalog} from "./pages";
+import {Home, Catalog,NotFound,Cart} from "./pages";
 import {Routes, Route} from "react-router-dom"; 
 import Footer from "./components/Footer";
+import axios from "axios";
 function App() {
   return (
         <div className="App">
@@ -10,6 +12,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
+          <Route path="/cart" element={<Cart/>} />
+          <Route path="*" element={<NotFound/>} />
         </Routes>
         <Footer></Footer>
     </div>

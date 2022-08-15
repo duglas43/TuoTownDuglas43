@@ -1,7 +1,82 @@
 import React from "react";
 import Logo from "../assets/img/logo.svg";
 import { Link } from "react-router-dom";
+import classnames from "classnames";
+import {HeaderCategorie} from "../components";
+import {useDispatch, useSelector} from "react-redux";
+import setCategory from "../redux/actions/categories";
 function Header() {
+  const dispatch = useDispatch();
+  const [open, setOpen] = React.useState(false);
+  function toggleCatalog() {
+    console.log(open)
+    open ? setOpen(false) : setOpen(true);
+  }
+  let categorie__list=[
+    {
+      name:"КУХОННЫЕ НОЖИ TUOTOWN",
+      type:0,
+      isSmall:false,
+    },
+    {
+      name:"СКЛАДНЫЕ НОЖИ TUOTOWN",
+      type:0,
+      isSmall:false,
+    },
+    {
+      name:"КУХОННЫЕ НОЖИ QXF",
+      type:0,
+      isSmall:false,
+    },
+    {
+      name:"ТОЧИЛЬНЫЕ КАМНИ",
+      type:1,
+      isSmall:false,
+    },
+    {
+      name:"НАБОРЫ ДЛЯ BBQ",
+      type:2,
+      isSmall:false,
+    },
+    {
+      name:"КУХОННЫЕ ПРИНАДЖЕЖНОСТИ",
+      type:3,
+      isSmall:false,
+    },
+    {
+      name:"ТУРИСТИЧЕСКИЕ ТОВАРЫ",
+      type:4,
+      isSmall:false,
+    },
+    {
+      name:"О КОМПАНИИ",
+      type:4,
+      isSmall:true,
+    },
+    {
+      name:"О КОМПАНИИ",
+      type:-1,
+      isSmall:true,
+    },
+    {
+      name:"НОВОСТИ",
+      type:-1,
+      isSmall:true,
+    },
+    {
+      name:"КОНТАКТЫ",
+      type:-1,
+      isSmall:true,
+    },
+    {
+      name:"КАК ПРОЕХАТЬ",
+      type:-1,
+      isSmall:true,
+    },
+  ]
+  const onSelectCategory = React.useCallback((index) => {
+    dispatch(setCategory(index));
+  }, []);
   return (
     <header className="header">
       <div className="container">
@@ -9,15 +84,15 @@ function Header() {
           <div className="header__wrapper">
             <div className="header__block info">
               <div className="catalog">
-                <button>
+                <button onClick={toggleCatalog}>
                   <svg className="svg--transparent " width="24" height="24">
                     <use xlinkHref="#menu"></use>
                   </svg>
                 </button>
-                <div className="catalog__menu hide">
+                <div className={classnames("catalog__menu", { active: open })}>
                   <div className="catalog__menu-head">
                     <div className="back">
-                      <button>
+                      <button onClick={toggleCatalog}>
                         <svg
                           className="svg--transparent "
                           width="8"
@@ -39,7 +114,7 @@ function Header() {
                           </svg>
                         </button>
                       </div>
-                      <div className="search">
+                      <div className="search" onClick={onSelectCategory(2)}>
                         <button>
                           <svg
                             className="svg--transparent "
@@ -53,31 +128,11 @@ function Header() {
                     </div>
                   </div>
                   <ul className="catalog__menu-list">
-                    <li className="catalog__menu-item">
-                      Кухонные ножи TUOTOWN
-                    </li>
-                    <li className="catalog__menu-item">
-                      Складные ножи TUOTOWN
-                    </li>
-                    <li className="catalog__menu-item">Кухонные ножи QXF</li>
-                    <li className="catalog__menu-item">Точильные камни</li>
-                    <li className="catalog__menu-item">Наборы для BBQ</li>
-                    <li className="catalog__menu-item">
-                      Кухонные принадлежности
-                    </li>
-                    <li className="catalog__menu-item">Туристические товары</li>
-                    <li className="catalog__menu-item catalog__menu-item--small">
-                      Новости
-                    </li>
-                    <li className="catalog__menu-item catalog__menu-item--small">
-                      О компании
-                    </li>
-                    <li className="catalog__menu-item catalog__menu-item--small">
-                      Контакты
-                    </li>
-                    <li className="catalog__menu-item catalog__menu-item--small">
-                      Как проехать
-                    </li>
+                    {categorie__list.map((item,index)=>{
+                      return(
+                        <HeaderCategorie key={index} {...item}/>
+                      )
+                    })}
                   </ul>
                 </div>
               </div>
