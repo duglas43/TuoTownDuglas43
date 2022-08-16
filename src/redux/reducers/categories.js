@@ -1,18 +1,24 @@
 const initialState = {
   sortBy:"popular",
-  payload:0
+  category:-1,
+  subCategory:0,
+  openMenu:false,
 }
 const categories = (state = initialState, action) => {
   switch (action.type) {
-    case "setCategory": {
+    case "setCategory": 
       return {
         ...state,
-        payload: action.payload,
+        category: action.category,
+        subCategory: action.subCategory,
+      }
+    case "activeMenu": 
+      return {
+        ...state,
+        openMenu: action.openMenu,
       };
-    }
-    default:{
+    default:
       return state;
-    }
   }
   return state;
 };

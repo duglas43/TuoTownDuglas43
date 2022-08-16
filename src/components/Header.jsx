@@ -4,79 +4,85 @@ import { Link } from "react-router-dom";
 import classnames from "classnames";
 import {HeaderCategorie} from "../components";
 import {useDispatch, useSelector} from "react-redux";
-import setCategory from "../redux/actions/categories";
+import {toggleMenu} from "../redux/actions/categories";
+
 function Header() {
   const dispatch = useDispatch();
-  const [open, setOpen] = React.useState(false);
-  function toggleCatalog() {
-    console.log(open)
-    open ? setOpen(false) : setOpen(true);
-  }
+  const openMenu = useSelector(state => state.categories.openMenu);
   let categorie__list=[
     {
       name:"КУХОННЫЕ НОЖИ TUOTOWN",
-      type:0,
+      category:0,
+      subCategory:0,
       isSmall:false,
     },
     {
       name:"СКЛАДНЫЕ НОЖИ TUOTOWN",
-      type:0,
+      category:0,
+      subCategory:1,
       isSmall:false,
     },
     {
       name:"КУХОННЫЕ НОЖИ QXF",
-      type:0,
+      category:0,
+      subCategory:2,
       isSmall:false,
     },
     {
       name:"ТОЧИЛЬНЫЕ КАМНИ",
-      type:1,
+      category:1,
+      subCategory:0,
       isSmall:false,
     },
     {
       name:"НАБОРЫ ДЛЯ BBQ",
-      type:2,
+      category:1,
+      subCategory:1,
       isSmall:false,
     },
     {
       name:"КУХОННЫЕ ПРИНАДЖЕЖНОСТИ",
-      type:3,
+      category:1,
+      subCategory:2,
       isSmall:false,
     },
     {
       name:"ТУРИСТИЧЕСКИЕ ТОВАРЫ",
-      type:4,
+      category:1,
+      subCategory:3,
       isSmall:false,
     },
     {
       name:"О КОМПАНИИ",
-      type:4,
+      category:-1,
+      subCategory:0,
       isSmall:true,
     },
     {
       name:"О КОМПАНИИ",
-      type:-1,
+      category:-1,
+      subCategory:0,
       isSmall:true,
     },
     {
       name:"НОВОСТИ",
-      type:-1,
+      category:-1,
+      subCategory:0,
       isSmall:true,
     },
     {
       name:"КОНТАКТЫ",
-      type:-1,
+      category:-1,
+      subCategory:0,
       isSmall:true,
     },
     {
       name:"КАК ПРОЕХАТЬ",
-      type:-1,
+      category:-1,
+      subCategory:0,
       isSmall:true,
     },
   ]
-  const onSelectCategory = React.useCallback((index) => {
-    dispatch(setCategory(index));
-  }, []);
   return (
     <header className="header">
       <div className="container">
@@ -84,15 +90,15 @@ function Header() {
           <div className="header__wrapper">
             <div className="header__block info">
               <div className="catalog">
-                <button onClick={toggleCatalog}>
+                <button onClick={()=>{dispatch(toggleMenu(true))}}>
                   <svg className="svg--transparent " width="24" height="24">
                     <use xlinkHref="#menu"></use>
                   </svg>
                 </button>
-                <div className={classnames("catalog__menu", { active: open })}>
+                <div className={classnames("catalog__menu", { active: openMenu })}>
                   <div className="catalog__menu-head">
                     <div className="back">
-                      <button onClick={toggleCatalog}>
+                      <button onClick={()=>{dispatch(toggleMenu(false))}}>
                         <svg
                           className="svg--transparent "
                           width="8"
@@ -114,7 +120,7 @@ function Header() {
                           </svg>
                         </button>
                       </div>
-                      <div className="search" onClick={onSelectCategory(2)}>
+                      <div className="search">
                         <button>
                           <svg
                             className="svg--transparent "

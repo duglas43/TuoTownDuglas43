@@ -1,7 +1,13 @@
-function setCategory(index){
+export function setCategory(category, subCategory){
   return {
     type: "setCategory",
-    payload: index
+    category: category,
+    subCategory: subCategory,
   }
 }
-export default setCategory;
+export function toggleMenu(bool){
+  return {
+    type: "activeMenu",
+    openMenu: bool,
+  }
+}

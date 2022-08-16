@@ -30,6 +30,7 @@
       "name": "Точильный камень deluxe",
       "price": 3850,
       "category": 1,
+      "subCategory": 0,
       "isNew": false
     },
     {
@@ -37,7 +38,8 @@
       "imageUrl": "https://dangor220.github.io/TuoTown/dist/assets/img/catalog/goods/bbq_1.webp",
       "name": "Гриль BBQ",
       "price": 30850,
-      "category": 2,
+      "category": 1,
+      "subCategory":1,
       "isNew": false
     },
     {
@@ -45,7 +47,8 @@
       "imageUrl": "https://dangor220.github.io/TuoTown/dist/assets/img/catalog/goods/kitchen_1.webp",
       "name": "Вилка",
       "price": 1250,
-      "category": 4,
+      "category": 1,
+      "subCategory": 2,
       "isNew": false
     },
     {
@@ -53,7 +56,8 @@
       "imageUrl": "https://dangor220.github.io/TuoTown/dist/assets/img/catalog/goods/kitchen_2.webp",
       "name": "Посуда",
       "price": 2200,
-      "category": 4,
+      "category": 1,
+      "subCategory": 2,
       "isNew": false
     },
     {
@@ -61,7 +65,8 @@
       "imageUrl": "https://dangor220.github.io/TuoTown/dist/assets/img/catalog/goods/tourism_1.webp",
       "name": "Горелка",
       "price": 5000,
-      "category": 5,
+      "category": 1,
+      "subCategory": 3,
       "isNew": true
     }
   ]
