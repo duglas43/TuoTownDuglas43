@@ -16,7 +16,7 @@ function CartProduct(){
                 <button className="cart-product-counter__btn ms-4 me-4">+</button>
                 <p className="cart-product__price">1500 р.</p>
               </div>
-              <button className="cart-product__delete"><i class="fa-light fa-xmark greytext"></i></button>
+              <button className="cart-product__delete"><i class="fa-solid fa-xmark greytext"></i></button>
             </div>
           </div>
         </div>

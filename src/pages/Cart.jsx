@@ -30,14 +30,14 @@ function Cart() {
         </div>
         <div className="row justify-content-between mt-4 gy-4">
           <div className="col-sm-4 ship">
-            <button type="button" className="ship-logo me-2"><i class="fa-light fa-2x fa-location-dot"></i></button>
+            <button type="button" className="ship-logo me-2"><i class="fa-solid fa-2x fa-location-dot"></i></button>
             <div>
               <p className="ship-title">Доставка</p>
               <p className="ship-info"> <span className="ship-town">Саратовская обл</span> Дата доставки уточняется по телефону</p>
             </div>
           </div>
           <div className="col-sm-4 payment">
-            <button type="button" className="payment-logo me-2"><i class="fa-light fa-2x fa-credit-card"></i></button>
+            <button type="button" className="payment-logo me-2"><i class="fa-solid fa-2x fa-credit-card"></i></button>
             <div>
               <p className="payment-title">Оплата</p>
               <p className="payment-info">Выберите способ оплаты</p>

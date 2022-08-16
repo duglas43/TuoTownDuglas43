@@ -11,6 +11,7 @@ function App() {
         <Header></Header>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/TuoTownduglas43" element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/cart" element={<Cart/>} />
           <Route path="*" element={<NotFound/>} />
