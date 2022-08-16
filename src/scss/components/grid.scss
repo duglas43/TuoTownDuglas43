@@ -1,47 +1,68 @@
-.grid-container{
-  &--42{
+.grid-container {
+  &--42 {
+    overflow: hidden;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
-  &--41{
+
+  &--41 {
+    overflow: hidden;
+
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
   }
-  &--32{
+
+  &--32 {
+    overflow: hidden;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
 }
-@media screen and(max-width:768px){
-  .grid-container{
+
+@media screen and(max-width:768px) {
+  .grid-container {
+
     &--42,
-    &--41{
+    &--41 {
+      overflow: hidden;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
     }
-    &--32{
+
+    &--32 {
+      overflow: hidden;
+
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
     }
   }
 }
+
 @media screen and (max-width:620px) {
-  .grid-container{
-    &--42{
+  .grid-container {
+    &--42 {
+      overflow: hidden;
+
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(2, 1fr);
     }
-    &--41{
+
+    &--41 {
+      overflow: hidden;
+
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(1, 1fr);
     }
-    &--32{
+
+    &--32 {
+      overflow: hidden;
+
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(2, 1fr);
     }

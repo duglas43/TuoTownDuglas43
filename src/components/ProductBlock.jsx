@@ -1,10 +1,10 @@
 import React from "react";
-function ProductBlock({image,title,price,isNew}) {
+function ProductBlock({imageUrl,name,price,isNew}) {
   return (
     <div className="product">
       <div className="product__block">
         <img
-          src={image}
+          src={imageUrl}
           alt="Изображение товара"
           width="240"
           height="127"
@@ -31,9 +31,10 @@ function ProductBlock({image,title,price,isNew}) {
           </button>
         </div>
       </div>
-      <div className="product__name">{title}</div>
+      <div className="product__name">{name}</div>
       <div className="product__price">
-        {price}<span className="isnew">{isNew ? "Новинка": ""}</span>
+        {`${price} р.`}
+        <span className="isnew">{isNew ? "Новинка" : ""}</span>
       </div>
     </div>
   );

@@ -3,45 +3,11 @@ import { Carousel } from "react-bootstrap";
 import catalogImg from "../assets/img/unsplash.webp";
 import { CatalogAccordion, ProductBlock } from "../components";
 import TestImage from "../assets/img/image_17.png";
-const products = [
-  {
-    image: TestImage,
-    title: "Тестовый нож",
-    price: "850",
-    isNew: true,
-  },
-  {
-    image: TestImage,
-    title: "Тестовый нож",
-    price: "850",
-    isNew: true,
-  },
-  {
-    image: TestImage,
-    title: "Тестовый нож",
-    price: "850",
-    isNew: true,
-  },
-  {
-    image: TestImage,
-    title: "Тестовый нож",
-    price: "850",
-    isNew: true,
-  },
-  {
-    image: TestImage,
-    title: "Тестовый нож",
-    price: "850",
-    isNew: true,
-  },
-  {
-    image: TestImage,
-    title: "Тестовый нож",
-    price: "850",
-    isNew: true,
-  },
-];
+import {useDispatch, useSelector} from "react-redux";
+import {fetchProducts} from "../redux/actions/products";
 function Catalog() {
+  const dispatch = useDispatch();
+  const products = useSelector(state => state.products.items);
   return (
     <div className="catalog">
       <Carousel interval={null} controls={false} indicators={false}>
@@ -54,7 +20,7 @@ function Catalog() {
         </Carousel.Item>
       </Carousel>
       <div className="container">
-        <h1>Ножи</h1>
+        <h1>КАТАЛОГ</h1>
         <div className="row">
           <div className="col-md-4">
             <CatalogAccordion />

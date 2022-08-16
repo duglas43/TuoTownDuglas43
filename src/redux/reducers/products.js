@@ -1,11 +1,23 @@
 const initialState = {
-  items:[],
-  knifes:[],
-  grindstones:[],
-  bbq:[],
+  items: [],
+  isLoaded: false,
+}
 
-}
 const products =(state=initialState, action)=>{
-  return state;
+  switch(action.type){
+    case "SET_PRODUCTS":
+      return {
+        ...state,
+        items:action.items,
+        isLoaded:true,
+      };
+    case "SET_LOADED":
+      return {
+        ...state,
+        isLoaded:action.items,
+      };
+    default:
+      return state;
+  }
 }
-export default products;
+export default products

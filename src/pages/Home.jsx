@@ -3,75 +3,47 @@ import { Slider, CategoriesItem, ProductBlock } from "../components/";
 import TestImage from "../assets/img/image_17.png";
 import InfoImg from "../assets/img/info-img.jpg";
 import InfoImg1 from "../assets/img/info-img1.jpg";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "../redux/actions/products";
+import { setActualTab } from "../redux/actions/home";
+import { fetchHomeProducts } from "../redux/actions/home";
+import classnames from "classnames";
+
 const CategorieItems = [
   {
+    categorie:0,
     svgImage: "#kitchen-knife",
     title: "Кухонные ножи",
   },
   {
+    categorie:0,
     svgImage: "#fold-knife",
     title: "Складные ножи",
   },
   {
+    categorie:1,
     svgImage: "#knife-sharpener",
     title: "Точилки для ножей",
   },
   {
+    categorie:1,
     svgImage: "#kitchen-accessories",
     title: "Аксессуары для кухни",
   },
 ];
-const products = [
-  {
-    image: TestImage,
-    title: "Тестовый нож",
-    price: "850",
-    isNew: true,
-  },
-  {
-    image: TestImage,
-    title: "Тестовый нож",
-    price: "850",
-    isNew: true,
-  },
-  {
-    image: TestImage,
-    title: "Тестовый нож",
-    price: "850",
-    isNew: true,
-  },
-  {
-    image: TestImage,
-    title: "Тестовый нож",
-    price: "850",
-    isNew: true,
-  },
-  {
-    image: TestImage,
-    title: "Тестовый нож",
-    price: "850",
-    isNew: true,
-  },
-  {
-    image: TestImage,
-    title: "Тестовый нож",
-    price: "850",
-    isNew: true,
-  },
-  {
-    image: TestImage,
-    title: "Тестовый нож",
-    price: "850",
-    isNew: true,
-  },
-  {
-    image: TestImage,
-    title: "Тестовый нож",
-    price: "850",
-    isNew: false,
-  },
-];
 function Home() {
+  const dispatch = useDispatch();
+  React.useEffect(() => {
+    dispatch(fetchProducts());
+    dispatch(fetchHomeProducts("isNew=true"));
+  } ,[]) 
+  const items = useSelector(state => state.products.items);
+  const actualItems = useSelector(state => state.home.actualItems);
+  const actualTab= useSelector(state => state.home.actualTab);
+  function onActualClick(actualTab,link) {
+    dispatch(setActualTab(actualTab));
+    dispatch(fetchHomeProducts(link));
+  }
   return (
     <main>
       <Slider></Slider>
@@ -89,7 +61,7 @@ function Home() {
           <h2 className="visually-hidden" hidden>
             Товары
           </h2>
-          {products.map((item, index) => {
+          {items.map((item, index) => {
             return <ProductBlock key={index} {...item} />;
           })}
         </section>
@@ -111,18 +83,18 @@ function Home() {
           </div>
         </div>
         <div className="grid-container--41 email-grid">
-          {products.slice(0, 4).map((item, index) => {
+          {items.slice(0, 4).map((item, index) => {
             return <ProductBlock key={index} {...item} />;
           })}
         </div>
         <section className="actual">
           <h2 className="visually-hidden">Актуальные товары</h2>
           <div className="actual__tabs">
-            <button className="actual__new">Новинки</button>
-            <button className="actual__popular">Популярное</button>
+            <button className={classnames("actual__new",{active: actualTab==0})} onClick={()=>{onActualClick(0,"isNew=true")}}>Новинки</button>
+            <button className={classnames("actual__new",{active: actualTab==1})} onClick={()=>{onActualClick(1,"category=1")}}>Популярное</button>
           </div>
           <div className="grid-container--41">
-            {products.slice(0, 4).map((item, index) => {
+            {actualItems.slice(0, 4).map((item, index) => {
               return <ProductBlock key={index} {...item} />;
             })}
           </div>
