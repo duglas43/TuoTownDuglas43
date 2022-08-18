@@ -6,7 +6,7 @@ import {HeaderCategorie} from "../components";
 import {useDispatch, useSelector} from "react-redux";
 import {toggleMenu} from "../redux/actions/categories";
 
-function Header() {
+function Header({onSelectCategory}) {
   const dispatch = useDispatch();
   const openMenu = useSelector(state => state.categories.openMenu);
   let categorie__list=[
@@ -148,7 +148,7 @@ function Header() {
                   <ul className="catalog__menu-list">
                     {categorie__list.map((item,index)=>{
                       return(
-                        <HeaderCategorie key={index} {...item}/>
+                        <HeaderCategorie key={index} onSelectCategory={onSelectCategory} {...item}/>
                       )
                     })}
                   </ul>
@@ -193,13 +193,13 @@ function Header() {
                 </Link>
               </div>
               <div className="message">
-                <a>
+                <Link to="#">
                   <svg className="svg--transparent" width="24" height="23">
                     <use xlinkHref="#message"></use>
                     <div className="message__count"></div>
                     <div className="message__circle"></div>
                   </svg>
-                </a>
+                </Link>
               </div>
               <div className="search">
                 <button>

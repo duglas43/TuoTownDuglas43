@@ -1,21 +1,16 @@
 import React from "react";
 import classnames from "classnames";
-import {useDispatch, useSelector} from "react-redux";
-import {setCategory,toggleMenu} from "../redux/actions/categories";
+import {useDispatch} from "react-redux";
+import {toggleMenu} from "../redux/actions/categories";
 import {Link} from "react-router-dom";
-import {fetchProducts} from "../redux/actions/products";
-
-function HeaderCategorie({name,isSmall,category,subCategory, filter}) {
+function HeaderCategorie({name,isSmall,category,subCategory, filter, onSelectCategory}) {
   const dispatch = useDispatch();
-  function onSetCategory(category,subCategory) {
-    dispatch(setCategory(category,subCategory));
-  }
-  function onClickButton(){
+  function onSelectCategorieHeader(category,subcategory,filter) {
     dispatch(toggleMenu(false));
-    dispatch(fetchProducts(filter));
+    onSelectCategory(category,subcategory,filter)
   }
   return(
-    <li onClick={()=>{onSetCategory(category,subCategory,filter)}} className={classnames("catalog__menu-item",{'catalog__menu-item--small':isSmall})}><Link to="/catalog" onClick={()=>{onClickButton()}}>{name}</Link></li>
+    <li className={classnames("catalog__menu-item",{'catalog__menu-item--small':isSmall})}><Link to="/catalog" onClick={()=>{onSelectCategorieHeader(category,subCategory,filter)}}>{name}</Link></li>
   )
 }
 export default HeaderCategorie;

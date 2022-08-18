@@ -1,10 +1,10 @@
 import categories from "./categories";
-import products from "./products";
+import catalogProducts from "./catalogProducts";
 import home from "./home";
 import {combineReducers} from "redux";
 const rootReducer = combineReducers({
   categories,
-  products,
+  catalogProducts,
   home,
 })
 export default rootReducer;

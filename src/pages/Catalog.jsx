@@ -1,13 +1,19 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import catalogImg from "../assets/img/unsplash.webp";
-import { CatalogAccordion, ProductBlock } from "../components";
-import TestImage from "../assets/img/image_17.png";
-import {useDispatch, useSelector} from "react-redux";
-import {fetchProducts} from "../redux/actions/products";
+import { CatalogAccordion, ProductBlock, ProductLoadingBlock } from "../components";
+import {useSelector, useDispatch} from "react-redux";
+import categoryList from "../data/CategoryList.js";
+import {fetchCatalogProducts} from "../redux/actions/catalogProducts";
 function Catalog() {
   const dispatch = useDispatch();
-  const products = useSelector(state => state.products.items);
+  let catalogProducts = useSelector(state => state.catalogProducts.items);
+  let isLoaded = useSelector((state) => state.catalogProducts.isLoaded);
+  let categories= useSelector(state => state.categories);
+  let subCategoryName=categoryList.find(item =>item.category===categories.category&&item.subCategory===categories.subCategory).subCategoryName;
+  React.useEffect(() => {
+    catalogProducts.length||dispatch(fetchCatalogProducts("isNew=true"));
+  },[]);
   return (
     <div className="catalog">
       <Carousel interval={null} controls={false} indicators={false}>
@@ -20,7 +26,7 @@ function Catalog() {
         </Carousel.Item>
       </Carousel>
       <div className="container">
-        <h1>КАТАЛОГ</h1>
+        <h1>{subCategoryName}</h1>
         <div className="row">
           <div className="col-md-4">
             <CatalogAccordion />
@@ -30,9 +36,13 @@ function Catalog() {
               <h2 className="visually-hidden" hidden>
                 Товары
               </h2>
-              {products.map((item, index) => {
-                return <ProductBlock key={index} {...item} />;
-              })}
+              {isLoaded
+                ? catalogProducts.map((item, index) => {
+                    return <ProductBlock key={index} {...item} />;
+                  })
+                : Array(3)
+                    .fill(0)
+                    .map((_, index) => <ProductLoadingBlock key={index} customWidth={250} />)}
             </div>
           </div>
         </div>

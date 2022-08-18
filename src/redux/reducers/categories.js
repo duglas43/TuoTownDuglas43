@@ -6,13 +6,13 @@ const initialState = {
 }
 const categories = (state = initialState, action) => {
   switch (action.type) {
-    case "setCategory": 
+    case "SET_CATEGORY": 
       return {
         ...state,
         category: action.category,
         subCategory: action.subCategory,
       }
-    case "activeMenu": 
+    case "TOGGLE_MENU": 
       return {
         ...state,
         openMenu: action.openMenu,
@@ -20,6 +20,5 @@ const categories = (state = initialState, action) => {
     default:
       return state;
   }
-  return state;
 };
 export default categories;

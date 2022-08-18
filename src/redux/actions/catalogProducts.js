@@ -1,29 +1,29 @@
 import axios from "axios";
 import  PropTypes  from "prop-types";
 
-export function setLoaded(val) {
+export function setCatalogLoaded(val) {
   return{
-    type:"SET_LOADED",
-    items:val
+    type:"SET_CATALOG_LOADED",
+    isLoaded:val
   }
 }
-export const fetchProducts=(link)=>(dispatch)=>{
-  dispatch(setLoaded(false));
+export const fetchCatalogProducts=(link)=>(dispatch)=>{
+  dispatch(setCatalogLoaded(false));
   axios.get(`https://my-json-server.typicode.com/duglas43/TuoTownduglas43/products?${link}`).then(({data})=>{
       dispatch(setProducts(data));
   })
 }
 export function setProducts(data) {
   return {
-    type: "SET_PRODUCTS",
+    type: "SET_CATALOG_PRODUCTS",
     items: data,
   }
 }
-fetchProducts.PropTypes={
+fetchCatalogProducts.PropTypes={
   link:PropTypes.string
 }
-fetchProducts.defaultProps={
-  link:""
+fetchCatalogProducts.defaultProps={
+  // link:"isNew=true"
 }
 
 

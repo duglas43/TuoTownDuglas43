@@ -3,21 +3,21 @@ const initialState = {
   isLoaded: false,
 }
 
-const products =(state=initialState, action)=>{
+const catalogProducts =(state=initialState, action)=>{
   switch(action.type){
-    case "SET_PRODUCTS":
+    case "SET_CATALOG_PRODUCTS":
       return {
         ...state,
         items:action.items,
         isLoaded:true,
       };
-    case "SET_LOADED":
+    case "SET_CATALOG_LOADED":
       return {
         ...state,
-        isLoaded:action.items,
+        isLoaded:action.isLoaded,
       };
-    default:
+      default:
       return state;
   }
 }
-export default products
+export default catalogProducts

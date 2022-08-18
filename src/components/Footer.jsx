@@ -1,7 +1,13 @@
 import React from "react";
 import Logo from "../assets/img/logo.svg";
-import { Link } from "react-router-dom";
+import {useDispatch} from "react-redux";
+import {setCategory} from "../redux/actions/categories";
+import {Link} from "react-router-dom";
 function Footer() {
+  const dispatch = useDispatch();
+  function handleClick(category,subcategory) {
+    dispatch(setCategory(category,subcategory));
+  }
   return (
     <footer>
       <div className="container">
@@ -44,17 +50,37 @@ function Footer() {
             <div className="footer-catalog">
               <div className="footer-catalog__title">Каталог</div>
               <ul className="footer-catalog__list">
-                <li className="footer-catalog__list-item">
-                  <a href="">Кухонные ножи</a>
+                <li
+                  className="footer-catalog__list-item"
+                  onClick={() => {
+                    handleClick(0, 0);
+                  }}
+                >
+                  <Link to="/catalog">Кухонные ножи</Link>
                 </li>
-                <li className="footer-catalog__list-item">
-                  <a href="">Складные ножи</a>
+                <li
+                  className="footer-catalog__list-item"
+                  onClick={() => {
+                    handleClick(0, 2);
+                  }}
+                >
+                  <Link to="/catalog">Складные ножи</Link>
                 </li>
-                <li className="footer-catalog__list-item">
-                  <a href="">Точилки для ножей</a>
+                <li
+                  className="footer-catalog__list-item"
+                  onClick={() => {
+                    handleClick(1, 0);
+                  }}
+                >
+                  <Link to="/catalog">Точилки для ножей</Link>
                 </li>
-                <li className="footer-catalog__list-item">
-                  <a href="">Аксессуары</a>
+                <li
+                  className="footer-catalog__list-item"
+                  onClick={() => {
+                    handleClick(1, 0);
+                  }}
+                >
+                  <Link to="/catalog">Аксессуары</Link>
                 </li>
               </ul>
             </div>
