@@ -1,5 +1,4 @@
 import axios from "axios";
-import PropTypes from "prop-types";
 export const setActualTab = (actualTab) => {
   return {
     type: "SET_ACTUAL_TAB",
@@ -41,10 +40,4 @@ function setActualHomeProducts(data) {
     type: "SET_ACTUAL_HOME_PRODUCTS",
     actualItems: data,
   }
-}
-setActualHomeProducts.defaultProps = {
-  link: "isNew=true",
-}
-fetchHomeProducts.defaultProps = {
-  link: "isNew=true",
 }

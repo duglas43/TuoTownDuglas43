@@ -41,12 +41,14 @@ function Home({onSelectCategory}) {
   React.useEffect(() => {
     dispatch(fetchHomeProducts());
     dispatch(fetchActualHomeProducts("isNew=true"));
-  } ,[])
-  const isLoaded = useSelector((state) => state.home.isLoaded);
-  const isActualLoaded = useSelector((state) => state.home.isActualLoaded);
-  const items = useSelector(state => state.home.items);
-  const actualItems = useSelector(state => state.home.actualItems);
-  const actualTab= useSelector(state => state.home.actualTab);
+  }, []);
+  const {isLoaded,isActualLoaded,items,actualItems,actualTab}=useSelector(({home})=>({
+    isLoaded:home.isLoaded,
+    isActualLoaded:home.isActualLoaded,
+    items:home.items,
+    actualItems:home.actualItems,
+    actualTab:home.actualTab,
+  }));
   function onActualClick(actualTab,link) {
     dispatch(setActualTab(actualTab));
     dispatch(fetchActualHomeProducts(link));
@@ -70,7 +72,7 @@ function Home({onSelectCategory}) {
           </h2>
           {isLoaded
             ? items.map((item, index) => {
-                return <ProductBlock key={index} {...item} />;
+                return <ProductBlock key={index} productObj={item} />;
               })
             : Array(8)
                 .fill(0)
@@ -95,7 +97,7 @@ function Home({onSelectCategory}) {
         </div>
         <div className="grid-container--41 email-grid">
           {items.slice(0, 4).map((item, index) => {
-            return <ProductBlock key={index} {...item} />;
+            return <ProductBlock key={index} productObj={item} />;
           })}
         </div>
         <section className="actual">
@@ -121,7 +123,7 @@ function Home({onSelectCategory}) {
           <div className="grid-container--41">
             {isActualLoaded
               ? actualItems.slice(0, 4).map((item, index) => {
-                  return <ProductBlock key={index} {...item} />;
+                  return <ProductBlock key={index} productObj={item} />;
                 })
               : Array(4)
                   .fill(0)

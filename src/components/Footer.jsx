@@ -33,16 +33,16 @@ function Footer() {
               <nav>
                 <ul className="footer-nav">
                   <li className="footer-nav__item">
-                    <a href="">Главная</a>
+                    <button>Главная</button>
                   </li>
                   <li className="footer-nav__item">
-                    <a href="">Новости</a>
+                    <button>Новости</button>
                   </li>
                   <li className="footer-nav__item">
-                    <a href="">О компании</a>
+                    <button>О компании</button>
                   </li>
                   <li className="footer-nav__item">
-                    <a href="">Контакты</a>
+                    <button>Контакты</button>
                   </li>
                 </ul>
               </nav>
@@ -88,44 +88,44 @@ function Footer() {
               <span>Мы в соцсетях</span>
               <ul className="social-links">
                 <li className="social-item">
-                  <a href="">
+                  <button>
                     <svg className="svg--white" width="15" height="15">
                       <use xlinkHref="#facebook"></use>
                     </svg>
-                  </a>
+                  </button>
                 </li>
                 <li className="social-item">
-                  <a href="">
+                  <button>
                     <svg className="svg--white" width="15" height="15">
                       <use xlinkHref="#twitter"></use>
                     </svg>
-                  </a>
+                  </button>
                 </li>
                 <li className="social-item">
-                  <a href="">
+                  <button>
                     <svg className="svg--white" width="15" height="15">
                       <use xlinkHref="#linkedin"></use>
                     </svg>
-                  </a>
+                  </button>
                 </li>
                 <li className="social-item">
-                  <a href="">
+                  <button>
                     <svg className="svg--white" width="15" height="15">
                       <use xlinkHref="#facebook"></use>
                     </svg>
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
           </div>
           <div className="footer__column footer-contacts">
             <p className="footer-contacts__title">Контактная информация</p>
-            <a className="tel" href="tel:81134567890">
+            <button className="tel" href="tel:81134567890">
               +7 (000) 000-00-00
-            </a>
-            <a href="mailto:lorem@mail.ru" className="mail">
+            </button>
+            <button href="mailto:lorem@mail.ru" className="mail">
               tuotown@mail.ru
-            </a>
+            </button>
             <p className="info">
               08:00 — 18:00, ежедневно <br />
               <br />
@@ -138,7 +138,7 @@ function Footer() {
         <div>
           <p>
             Dev. Duglas43 2022
-            <a href="https://github.com/duglas43/">
+            <button href="https://github.com/duglas43/">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -148,7 +148,7 @@ function Footer() {
               >
                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
               </svg>
-            </a>
+            </button>
           </p>
         </div>
       </div>

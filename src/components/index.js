@@ -8,3 +8,5 @@ export {default as CatalogAccordion} from './CatalogAccordion';
 export {default as CartProduct} from './CartProduct';
 export {default as HeaderCategorie} from './HeaderCategorie';
 export {default as ProductLoadingBlock} from './ProductBlock/ProductLoadingBlock';
+
+

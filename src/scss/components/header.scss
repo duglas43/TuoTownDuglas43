@@ -50,33 +50,10 @@
   }
   // Расположение кружков 
   .cart {
-    position: relative;
-
-    &__count {
-      font-size: 10px;
-      position: absolute;
-      top: -6.3px;
-      left: 18.2px;
-      z-index: 100;
-    }
-
-    &__circle {
-      display: none;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background-color: #c80000;
-      position: absolute;
-      top: -7px;
-      left: 14px;
-
-      &--active {
-        display: block;
-      }
-    }
-    &.info__cart{
-      display: none;
-    }
+    padding-top: 4px;
+  }
+  .cart.info__cart{
+    display: none;
   }
   .message{
     position: relative;
@@ -150,11 +127,14 @@
   }
 }
 @media screen and (max-width:768px) {
+  .cart.info__cart{
+    display: block;
+  }
   .header {
     .phone {
       &__svg {
         display: block;
-        padding-top: 5px;
+        
       }
       &__text {
         display: none;

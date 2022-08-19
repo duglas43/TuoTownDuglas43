@@ -5,7 +5,6 @@
     gap: 10px;
     grid-template-columns: repeat(4, 1fr);
     // grid-template-rows: repeat(2, 1fr);
-    text-align: center;
     svg{margin: 0 auto !important;}
   }
 
@@ -16,7 +15,6 @@
     gap: 10px;
     grid-template-columns: repeat(4, 1fr);
     // grid-template-rows: repeat(1, 1fr);
-    text-align: center;
 
   }
 
@@ -26,7 +24,6 @@
     gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     // grid-template-rows: repeat(2, 1fr);
-    text-align: center;
 
   }
 }
@@ -39,7 +36,6 @@
       overflow: hidden;
       grid-template-columns: repeat(2, 1fr);
       // grid-template-rows: repeat(2, 1fr);
-    text-align: center;
 
     }
 
@@ -48,7 +44,6 @@
 
       grid-template-columns: repeat(2, 1fr);
       // grid-template-rows: repeat(2, 1fr);
-    text-align: center;
 
     }
   }
@@ -61,7 +56,6 @@
 
       grid-template-columns: repeat(1, 1fr);
       // grid-template-rows: repeat(2, 1fr);
-    text-align: center;
 
     }
 
@@ -70,7 +64,6 @@
 
       grid-template-columns: repeat(1, 1fr);
       // grid-template-rows: repeat(1, 1fr);
-    text-align: center;
     svg{margin: 0 auto}
 
     }
@@ -80,7 +73,6 @@
 
       grid-template-columns: repeat(1, 1fr);
       // grid-template-rows: repeat(2, 1fr);
-    text-align: center;
 
     }
   }

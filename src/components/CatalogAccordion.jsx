@@ -1,7 +1,7 @@
 import React from "react";
 import { Accordion } from "react-bootstrap";
 import {useSelector, useDispatch} from "react-redux";
-import {setCategory,} from "../redux/actions/categories";
+import {setCategory} from "../redux/actions/categories";
 import { fetchCatalogProducts} from "../redux/actions/catalogProducts";
 import categoryList from "../data/CategoryList.js";
 import classnames from "classnames";

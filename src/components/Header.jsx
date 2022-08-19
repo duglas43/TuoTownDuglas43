@@ -8,7 +8,11 @@ import {toggleMenu} from "../redux/actions/categories";
 
 function Header({onSelectCategory}) {
   const dispatch = useDispatch();
-  const openMenu = useSelector(state => state.categories.openMenu);
+  const openMenu = useSelector(({categories}) => categories.openMenu);
+  const { totalPrice, totalCount } = useSelector(({ cart }) => ({
+    totalPrice: cart.totalPrice,
+    totalCount: cart.totalCount,
+  }));
   let categorie__list=[
     {
       name:"КУХОННЫЕ НОЖИ TUOTOWN",
@@ -102,15 +106,25 @@ function Header({onSelectCategory}) {
           <div className="header__wrapper">
             <div className="header__block info">
               <div className="catalog">
-                <button onClick={()=>{dispatch(toggleMenu(true))}}>
+                <button
+                  onClick={() => {
+                    dispatch(toggleMenu(true));
+                  }}
+                >
                   <svg className="svg--transparent " width="24" height="24">
                     <use xlinkHref="#menu"></use>
                   </svg>
                 </button>
-                <div className={classnames("catalog__menu", { active: openMenu })}>
+                <div
+                  className={classnames("catalog__menu", { active: openMenu })}
+                >
                   <div className="catalog__menu-head">
                     <div className="back">
-                      <button onClick={()=>{dispatch(toggleMenu(false))}}>
+                      <button
+                        onClick={() => {
+                          dispatch(toggleMenu(false));
+                        }}
+                      >
                         <svg
                           className="svg--transparent "
                           width="8"
@@ -146,10 +160,14 @@ function Header({onSelectCategory}) {
                     </div>
                   </div>
                   <ul className="catalog__menu-list">
-                    {categorie__list.map((item,index)=>{
-                      return(
-                        <HeaderCategorie key={index} onSelectCategory={onSelectCategory} {...item}/>
-                      )
+                    {categorie__list.map((item, index) => {
+                      return (
+                        <HeaderCategorie
+                          key={index}
+                          onSelectCategory={onSelectCategory}
+                          {...item}
+                        />
+                      );
                     })}
                   </ul>
                 </div>
@@ -170,11 +188,12 @@ function Header({onSelectCategory}) {
                 </a>
               </div>
               <div className="cart info__cart">
-                <svg className="svg--transparent" width="19" height="20">
-                  <use xlinkHref="#cart"></use>
-                  <div className="cart__count"></div>
-                  <div className="cart__circle"></div>
-                </svg>
+              <span className="fa-layers  fa-fw" style={{"font-size":"20px"}} >
+                    <i className="fa-solid fa-cart-shopping"></i>
+                    <span className="fa-layers-counter --fa-top-0 " data-fa-transform="--fa-top-10" style={{"background":"red"}}>
+                      {totalCount}
+                    </span>
+                  </span>
               </div>
             </div>
             <div className="header__block logo">
@@ -185,11 +204,12 @@ function Header({onSelectCategory}) {
             <div className="header__block user">
               <div className="cart">
                 <Link to="/cart">
-                  <svg className="svg--transparent" width="19" height="20">
-                    <use xlinkHref="#cart"></use>
-                    <div className="cart__count"></div>
-                    <div className="cart__circle"></div>
-                  </svg>
+                  <span className="fa-layers  fa-fw" style={{"font-size":"20px"}} >
+                    <i className="fa-solid fa-cart-shopping"></i>
+                    <span className="fa-layers-counter --fa-top-0 " data-fa-transform="--fa-top-10" style={{"background":"red"}}>
+                      {totalCount}
+                    </span>
+                  </span>
                 </Link>
               </div>
               <div className="message">

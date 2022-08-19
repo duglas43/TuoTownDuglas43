@@ -1,18 +1,21 @@
 import React from "react";
-function ProductBlock({imageUrl,name,price,isNew}) {
+import {useDispatch} from "react-redux";
+import {addProductToCart} from "../../redux/actions/cart";
+function ProductBlock({productObj}) {
+  const dispatch = useDispatch();
   return (
     <div className="product">
       <div className="product__block">
         <img
-          src={imageUrl}
+          src={productObj.imageUrl}
           alt="Изображение товара"
           width="240"
           height="127"
           className="product__image"
         ></img>
-        <div className="product__cart-add-wrap">
+        <div className="product__cart-add-wrap" onClick={()=>{dispatch(addProductToCart(productObj))}}>
           <button type="button">
-            <div className="product__cart-add">
+            <div className="product__cart-add" >
               <svg
                 className="svg--transparent product__cart-add-plus"
                 width="24"
@@ -31,10 +34,10 @@ function ProductBlock({imageUrl,name,price,isNew}) {
           </button>
         </div>
       </div>
-      <div className="product__name">{name}</div>
+      <div className="product__name">{productObj.name}</div>
       <div className="product__price">
-        {`${price} р.`}
-        <span className="isnew">{isNew ? "Новинка" : ""}</span>
+        {`${productObj.price} р.`}
+        <span className="isnew">{productObj.isNew ? "Новинка" : ""}</span>
       </div>
     </div>
   );

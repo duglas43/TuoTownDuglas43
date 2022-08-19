@@ -11,6 +11,13 @@
 @import"components/catalog.scss";
 @import"components/cart.scss";
 
+
+:root {
+  --fa-top:-4px;
+  --fa-right:-3px;
+  --fa-counter-scale:0.4;
+  --fa-counter-max-width:53px;
+}
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;

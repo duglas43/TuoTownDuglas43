@@ -1,7 +1,6 @@
 import React from "react";
 import ContentLoader from "react-content-loader";
 import PropTypes from "prop-types";
-
 const ProductLoadingBlock = ({customWidth}) => {
   let displayWidth = window.innerWidth;
   if(displayWidth < 768 && displayWidth>425) {

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/TuoTownduglas43/static/css/main.00b17f9f.css",
-    "main.js": "/TuoTownduglas43/static/js/main.21f78a40.js",
+    "main.css": "/TuoTownduglas43/static/css/main.8e128703.css",
+    "main.js": "/TuoTownduglas43/static/js/main.a6c4af08.js",
     "static/media/slick__image_2.jpeg": "/TuoTownduglas43/static/media/slick__image_2.59650d25e8a340e40d6a.jpeg",
     "static/media/slick__image_4.jpeg": "/TuoTownduglas43/static/media/slick__image_4.ba3c723134e43bb6d086.jpeg",
     "static/media/slick__image_3.jpeg": "/TuoTownduglas43/static/media/slick__image_3.f265402df404cf0ecd15.jpeg",
@@ -12,11 +12,11 @@
     "static/media/logo.svg": "/TuoTownduglas43/static/media/logo.39ed0b287a05dc7a01894a5b9f5060ed.svg",
     "static/media/image_17.png": "/TuoTownduglas43/static/media/image_17.8d4d554a895bd8af4cfb.png",
     "index.html": "/TuoTownduglas43/index.html",
-    "main.00b17f9f.css.map": "/TuoTownduglas43/static/css/main.00b17f9f.css.map",
-    "main.21f78a40.js.map": "/TuoTownduglas43/static/js/main.21f78a40.js.map"
+    "main.8e128703.css.map": "/TuoTownduglas43/static/css/main.8e128703.css.map",
+    "main.a6c4af08.js.map": "/TuoTownduglas43/static/js/main.a6c4af08.js.map"
   },
   "entrypoints": [
-    "static/css/main.00b17f9f.css",
-    "static/js/main.21f78a40.js"
+    "static/css/main.8e128703.css",
+    "static/js/main.a6c4af08.js"
   ]
 }

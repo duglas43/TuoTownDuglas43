@@ -5,6 +5,7 @@ import {Routes, Route} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {fetchCatalogProducts} from "./redux/actions/catalogProducts";
 import {setCategory} from "./redux/actions/categories";
+import addProductToCart from "./redux/actions/cart";
 function App() {
   const dispatch = useDispatch();
   function onSelectCategory(category,subcategory,filter) {
