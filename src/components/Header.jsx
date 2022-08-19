@@ -188,7 +188,7 @@ function Header({onSelectCategory}) {
                 </a>
               </div>
               <div className="cart info__cart">
-              <span className="fa-layers  fa-fw" style={{"font-size":"20px"}} >
+              <span className="fa-layers  fa-fw" style={{"fontSize":"20px"}} >
                     <i className="fa-solid fa-cart-shopping"></i>
                     <span className="fa-layers-counter --fa-top-0 " data-fa-transform="--fa-top-10" style={{"background":"red"}}>
                       {totalCount}
@@ -204,7 +204,7 @@ function Header({onSelectCategory}) {
             <div className="header__block user">
               <div className="cart">
                 <Link to="/cart">
-                  <span className="fa-layers  fa-fw" style={{"font-size":"20px"}} >
+                  <span className="fa-layers  fa-fw" style={{"fontSize":"20px"}} >
                     <i className="fa-solid fa-cart-shopping"></i>
                     <span className="fa-layers-counter --fa-top-0 " data-fa-transform="--fa-top-10" style={{"background":"red"}}>
                       {totalCount}
