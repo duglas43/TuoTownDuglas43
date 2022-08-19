@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TuoTownduglas43/static/css/main.f9b9a15f.css",
-    "main.js": "/TuoTownduglas43/static/js/main.88ef664d.js",
+    "main.js": "/TuoTownduglas43/static/js/main.c07181ca.js",
     "static/media/slick__image_2.jpeg": "/TuoTownduglas43/static/media/slick__image_2.59650d25e8a340e40d6a.jpeg",
     "static/media/slick__image_4.jpeg": "/TuoTownduglas43/static/media/slick__image_4.ba3c723134e43bb6d086.jpeg",
     "static/media/slick__image_3.jpeg": "/TuoTownduglas43/static/media/slick__image_3.f265402df404cf0ecd15.jpeg",
@@ -12,10 +12,10 @@
     "static/media/logo.svg": "/TuoTownduglas43/static/media/logo.39ed0b287a05dc7a01894a5b9f5060ed.svg",
     "index.html": "/TuoTownduglas43/index.html",
     "main.f9b9a15f.css.map": "/TuoTownduglas43/static/css/main.f9b9a15f.css.map",
-    "main.88ef664d.js.map": "/TuoTownduglas43/static/js/main.88ef664d.js.map"
+    "main.c07181ca.js.map": "/TuoTownduglas43/static/js/main.c07181ca.js.map"
   },
   "entrypoints": [
     "static/css/main.f9b9a15f.css",
-    "static/js/main.88ef664d.js"
+    "static/js/main.c07181ca.js"
   ]
 }
