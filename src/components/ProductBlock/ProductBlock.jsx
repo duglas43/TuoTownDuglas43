@@ -1,6 +1,7 @@
 import React from "react";
 import {useDispatch} from "react-redux";
 import {addProductToCart} from "../../redux/actions/cart";
+import PropTypes from "prop-types";
 function ProductBlock({productObj}) {
   const dispatch = useDispatch();
   return (
@@ -41,5 +42,16 @@ function ProductBlock({productObj}) {
       </div>
     </div>
   );
+}
+ProductBlock.propTypes = {
+  productObj: PropTypes.object.isRequired,
+}
+ProductBlock.defaultProps = {
+  productObj: {
+    name: "Название товара",
+    price: "0",
+    isNew: false,
+    imageUrl: "",
+  },
 }
 export default ProductBlock;

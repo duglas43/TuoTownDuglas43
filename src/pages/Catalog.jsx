@@ -38,7 +38,7 @@ function Catalog() {
               </h2>
               {isLoaded
                 ? catalogProducts.map((item, index) => {
-                    return <ProductBlock key={index} {...item} />;
+                    return <ProductBlock key={index} productObj={item} />;
                   })
                 : Array(3)
                     .fill(0)
