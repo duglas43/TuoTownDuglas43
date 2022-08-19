@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/TuoTownduglas43/static/css/main.80fe6b75.css",
-    "main.js": "/TuoTownduglas43/static/js/main.c54f16e0.js",
-    "static/media/slick__image_2.jpeg": "/TuoTownduglas43/static/media/slick__image_2.59650d25e8a340e40d6a.jpeg",
-    "static/media/slick__image_4.jpeg": "/TuoTownduglas43/static/media/slick__image_4.ba3c723134e43bb6d086.jpeg",
-    "static/media/slick__image_3.jpeg": "/TuoTownduglas43/static/media/slick__image_3.f265402df404cf0ecd15.jpeg",
-    "static/media/slick__image_1.jpeg": "/TuoTownduglas43/static/media/slick__image_1.2b3c054a446f89988aff.jpeg",
+    "main.js": "/TuoTownduglas43/static/js/main.09fc7bb2.js",
+    "static/media/slick__image_2.jpeg": "/TuoTownduglas43/static/media/slick__image_2.d9320d88dc78c2fe083d.jpeg",
     "static/media/unsplash.webp": "/TuoTownduglas43/static/media/unsplash.0c4cd26329e2954ad3fa.webp",
+    "static/media/slick__image_3.jpeg": "/TuoTownduglas43/static/media/slick__image_3.9f1a3b3b2cc10b7d9ed5.jpeg",
+    "static/media/slick__image_4.jpeg": "/TuoTownduglas43/static/media/slick__image_4.d61a788d177488af51a5.jpeg",
     "static/media/info-img.jpg": "/TuoTownduglas43/static/media/info-img.c62ed2e8dd677556fd42.jpg",
     "static/media/info-img1.jpg": "/TuoTownduglas43/static/media/info-img1.759f63b7c38006a744b2.jpg",
+    "static/media/slick__image_1.jpeg": "/TuoTownduglas43/static/media/slick__image_1.53c03b73592d4cfb9c34.jpeg",
     "static/media/logo.svg": "/TuoTownduglas43/static/media/logo.39ed0b287a05dc7a01894a5b9f5060ed.svg",
     "index.html": "/TuoTownduglas43/index.html",
     "main.80fe6b75.css.map": "/TuoTownduglas43/static/css/main.80fe6b75.css.map",
-    "main.c54f16e0.js.map": "/TuoTownduglas43/static/js/main.c54f16e0.js.map"
+    "main.09fc7bb2.js.map": "/TuoTownduglas43/static/js/main.09fc7bb2.js.map"
   },
   "entrypoints": [
     "static/css/main.80fe6b75.css",
-    "static/js/main.c54f16e0.js"
+    "static/js/main.09fc7bb2.js"
   ]
 }
