@@ -3,6 +3,9 @@ $grey-back:#353535;
 $lightgrey:#F6F6F6;
 $greytext:#ADACAC;
 $grey-block: #303030;
+.greyback{
+  background-color: $grey-back;
+}
 .greytext{
   color: $greytext;
 }

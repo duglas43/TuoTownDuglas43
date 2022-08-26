@@ -123,7 +123,7 @@ function Footer() {
             <button className="tel" href="tel:81134567890">
               +7 (000) 000-00-00
             </button>
-            <button href="mailto:lorem@mail.ru" className="mail">
+            <button href="mailto:lorem@mail.ru" className="mail d-block">
               tuotown@mail.ru
             </button>
             <p className="info">

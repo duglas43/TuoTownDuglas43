@@ -1,3 +1,39 @@
+
+# Интернет-магазин TuoTown
+
+SPA интернет-магазин TuoTown.
+## Ссылка на сайт
+
+https://duglas43.github.io/TuoTownduglas43/
+## Stack
+
+- ReactJS + хуки
+- React Router
+- Redux
+- Redux thunk
+- Redux-persist
+- json-server
+- Axios
+- classnames
+- PropTypes
+- React Bootstrap
+- React-content-loader
+
+
+
+## Немного о проекте
+
+Сайт сверстал с нуля по дизайну в Figma, ссылка:
+https://www.figma.com/file/WxqAgSYR6gHLXLg0gW2Y56/TuoTown
+Слайдер реализован с помощью React Bootstrap, анимация загрузки карточки товара - React-content-loader, взаимодествие с сервером происходит с помощью Axios и фейкового REST API json-server, json файл с данными:
+https://github.com/duglas43/TuoTownduglas43/blob/main/db.json
+
+
+## Скриншот
+
+![App Screenshot](./src/assets/img/Screenshot_6.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

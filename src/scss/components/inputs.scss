@@ -16,3 +16,17 @@
   padding: 1.5em;
   font-size: 16px;
 }
+.react-dadata__input,
+.react-dadata__suggestions{
+  background-color: #545454!important;
+  border: none !important;
+  border-color: none !important;
+  box-shadow: none !important;
+  color:$greytext;
+}
+.react-dadata__input{
+  color:white;
+}
+.react-dadata--highlighted{
+  color: white !important;
+}
