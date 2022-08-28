@@ -32,9 +32,11 @@ const cart = (state = initialState, action) => {
             ...state.items[action.payload].filter((elem,i,arr)=>i<arr.length-1),
           ],
       }
+      const removeProperty = prop => ({ [prop]:_, ...rest }) => rest
+      const removePayload=removeProperty([action.payload])
       return{
         ...state,
-        items:newItems,
+        items:(newItems[action.payload].length===0 ? removePayload(newItems):newItems),
         totalPrice: Object.values(newItems).reduce((prev, current) => {
           return prev + current.reduce((obj, sum) => obj + sum.price, 0);
         }, 0),
