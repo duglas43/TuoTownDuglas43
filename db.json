@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 0,
-      "imageUrl": "https://dangor220.github.io/TuoTown/dist/assets/img/catalog/goods/goods_1.svg",
+      "imageUrl": "https://dangor220.github.io/tuo-town/dist/assets/img/catalog/goods/goods_1.svg",
       "name": "Кухонный нож SQ01-B",
       "price": 850,
       "category": 0,
@@ -10,7 +10,7 @@
     },
     {
       "id": 1,
-      "imageUrl": "https://dangor220.github.io/TuoTown/dist/assets/img/catalog/goods/goods_2.svg",
+      "imageUrl": "https://dangor220.github.io/tuo-town/dist/assets/img/catalog/goods/goods_2.svg",
       "name": "Кухонный нож JJ001-TUO-B",
       "price": 12850,
       "category": 0,
@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "imageUrl": "https://dangor220.github.io/TuoTown/dist/assets/img/catalog/goods/stone.webp",
+      "imageUrl": "https://dangor220.github.io/tuo-town/dist/assets/img/catalog/goods/stone.webp",
       "name": "Точильный камень deluxe",
       "price": 3850,
       "category": 1,
@@ -35,7 +35,7 @@
     },
     {
       "id": 4,
-      "imageUrl": "https://dangor220.github.io/TuoTown/dist/assets/img/catalog/goods/bbq_1.webp",
+      "imageUrl": "https://dangor220.github.io/tuo-town/dist/assets/img/catalog/goods/bbq_1.webp",
       "name": "Гриль BBQ",
       "price": 30850,
       "category": 1,
@@ -44,7 +44,7 @@
     },
     {
       "id": 5,
-      "imageUrl": "https://dangor220.github.io/TuoTown/dist/assets/img/catalog/goods/kitchen_1.png",
+      "imageUrl": "https://dangor220.github.io/tuo-town/dist/assets/img/catalog/goods/kitchen_1.png",
       "name": "Вилка",
       "price": 1250,
       "category": 1,
@@ -53,7 +53,7 @@
     },
     {
       "id": 6,
-      "imageUrl": "https://dangor220.github.io/TuoTown/dist/assets/img/catalog/goods/kitchen_2.png",
+      "imageUrl": "https://dangor220.github.io/tuo-town/dist/assets/img/catalog/goods/kitchen_2.png",
       "name": "Посуда",
       "price": 2200,
       "category": 1,
@@ -62,7 +62,7 @@
     },
     {
       "id": 6,
-      "imageUrl": "https://dangor220.github.io/TuoTown/dist/assets/img/catalog/goods/tourism_1.png",
+      "imageUrl": "https://dangor220.github.io/tuo-town/dist/assets/img/catalog/goods/tourism_1.png",
       "name": "Горелка",
       "price": 5000,
       "category": 1,
